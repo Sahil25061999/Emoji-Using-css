@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0px;
+}
+
+.container{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-evenly;
+    
+}
+
+.smile_emoji,.wow_emoji,.shades_emoji{
+    margin: 10px;
+}
+
+.head{
+    --facesize: 16rem;
+    width: var(--facesize);
+    height: var(--facesize);
+    /* width: 100%; */
+    /* height:100%; */
+    border-radius: 50%;
+    background: rgb(255, 241, 42);
+    position: relative;
+    overflow: hidden;
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+
+}
+
+
+.eye_section{
+    
+    position:absolute;
+    top:calc(var(--facesize) * .25);
+    left: calc(var(--facesize)* .45);
+
+}
+
+
+.left_eye,.right_eye{
+    background-color: rgb(0, 0, 2);
+    height: calc(var(--facesize) * .15);
+    width: calc(var(--facesize) * .075);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left_eye{
+    left:calc(var(--facesize) * -.2);
+}
+
+.right_eye{
+    left: calc(var(--facesize) * .2);
+}
+
+.mouth{
+    --mouth_height:calc(var(--facesize) * .3);
+    position: absolute;
+    top:calc(var(--facesize) * .60);
+    left: calc(var(--facesize) * .50);
+    transform: translateX(-50%);
+    height: var(--mouth_height);
+    width: calc(var(--facesize) * .6);
+    background: #000;
+    border-radius: 5% 5% var(--mouth_height) var(--mouth_height);
+}
+
+.wow_emoji .mouth{
+    border-radius: 100%;
+    width: calc(var(--mouth_height) * .8);
+    height: calc(var(--facesize) * .3);
+}
+
+
+.shades_emoji .mouth{
+    border-radius: 5px;
+    width: calc(var(--facesize) * .45);
+    background-color: cornsilk;
+    border: 3px dashed salmon;
+    z-index: 1;
+}
+
+
+.righttop,.rightbottom,.lefttop,.leftbottom{
+    height: 10px;
+    width: calc(var(--facesize) * .45);
+    background-color: cornsilk;
+    border: 2px dashed salmon;
+    position: absolute;
+    top: calc(var(--facesize) * .3);
+    left:calc(var(--facesize)* .25);
+    transform: rotate(-20deg);
+}
+
+.rightbottom{
+    top: calc(var(--facesize) * .64);
+    transform: rotate(20deg);
+}
+
+.lefttop{
+    left: calc(var(--facesize)* -.48);
+    top: calc(var(--facesize) * .35);
+    transform: rotate(18deg);
+}
+
+.leftbottom{
+    top: calc(var(--facesize) * .60);
+    left: calc(var(--facesize)* -.48);
+    transform: rotate(-20deg);
+}
